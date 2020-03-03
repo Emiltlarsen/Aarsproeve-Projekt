@@ -1,8 +1,8 @@
 var BREDDE = 600;
 var HOJDE = 400;
-var time = 0;
-var minutter = 0;
-var sekunder = 0;
+var time = 00;
+var minutter = 00;
+var sekunder = 00;
 
 
 
@@ -16,19 +16,23 @@ function draw() {
     background(200);
 
     textSize(23);
-    text("Klokken er = " + time + ":" + minutter + ":" + sekunder, 50, 175);
 
-    sekunder =+ sekunder + 0,033333;
+    var decisek = sekunder.toFixed(3);
+
+    sekunder =+ sekunder + 0.033333;
 
     if (sekunder >= 60) {
-        sekunder == 0;
-        minutter =+ 1
+        sekunder = 0;
+        minutter = minutter + 1;
     
         }
 
         if (minutter >= 60) {
-            minutter == 0;
-            time =+ 1
+            minutter = 0;
+            time = time + 1;
         
             }
+
+            text("Klokken er = " + time + ":" + minutter + ":" + decisek, 50, 175);
+
 }
