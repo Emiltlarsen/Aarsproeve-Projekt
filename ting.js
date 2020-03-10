@@ -40,10 +40,11 @@ function draw() {
 
 
     if (sekunder >= 10, minutter >= 10, time >= 10){
-        text("Klokken er = " + time + ":" + minutter + ":" + decisek, 50, 175);
-        }
+            text("Klokken er = " + time + ":" + minutter + ":" + decisek, 50, 175);
+            }
+
             else if (sekunder >= 10, minutter >= 10){
-            text("Klokken er = " + time0 + time + ":" + minutter + ":" + decisek, 50, 175);
+                text("Klokken er = " + time0 + time + ":" + minutter + ":" + decisek, 50, 175);
             }
 
             else if (sekunder >= 10, time >= 10){
@@ -53,7 +54,7 @@ function draw() {
             else if (minutter >= 10, time >= 10){
                 text("Klokken er = " + time + ":" + minutter + ":" + sekunder0 + decisek, 50, 175);
             }
-            
+
             else if (sekunder >= 10){
                 text("Klokken er = " + time0 + time + ":" + minutter0 + minutter + ":" + decisek, 50, 175);
             }
@@ -70,18 +71,5 @@ function draw() {
                 text("Klokken er = " + time0 + time + ":" + minutter0 + minutter + ":" + sekunder0 + decisek, 50, 175);
             }
 
-
-/*
-    if (minutter >= 10){
-
-        } else {
-            text("Klokken er = " + time0 + time + ":" + minutter0 + minutter + ":" + sekunder0 + decisek, 50, 175);
-        }
-
-    if (time >= 10){
-        
-        } else {
-            text("Klokken er = " + time0 + time + ":" + minutter0 + minutter + ":" + sekunder0 + decisek, 50, 175);
-        }
-*/
+                
 }
