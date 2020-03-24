@@ -1,9 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-
-<script src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.js"></script>
-<script type='text/javascript' src='ting.js'></script>
+/*  Lav skema af arrays. Der skal oprettes 5 'hoved' arrays, hvor der skal lave 'underarrays' af dem.
+    Arrayet skal indeholde de essentiele ting. */
     
-</head>
-</html>
