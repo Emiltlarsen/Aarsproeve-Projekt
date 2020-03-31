@@ -1,8 +1,11 @@
 var BREDDE = 600;
 var HOJDE = 400;
-var time = 0;
-var minutter = 0;
+
+var time = 7;
+var minutter = 15;
 var sekunder = 0;
+var sekunder_alt; 
+
 
 var time0 = 0;
 var minutter0 = 0;
@@ -24,6 +27,9 @@ function draw() {
 
     sekunder =+ sekunder + 1/30;
 
+    sekunder_alt = (time * 3600) + (minutter * 60) + sekunder;
+
+    
     if (sekunder >= 60) {
         sekunder = 0;
         minutter = minutter + 1;
@@ -39,6 +45,9 @@ function draw() {
     }
 
 
+
+
+    //herunder ses koden vis opgave er at vise hvad klokken er i form af text. If statements bruges 
     if (sekunder >= 10, minutter >= 10, time >= 10){
             text("Klokken er = " + time + ":" + minutter + ":" + decisek, 50, 175);
             }
