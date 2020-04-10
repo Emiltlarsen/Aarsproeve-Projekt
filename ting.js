@@ -1,8 +1,6 @@
-//Canvas størrelse
 var BREDDE = 600;
 var HOJDE = 400;
 
-//
 var time = 7;
 var minutter = 15;
 var sekunder = 0;
@@ -14,25 +12,11 @@ var minutter0 = 0;
 var sekunder0 = 0;
 
 
-//
-var tid = 0;
-var start = 5;
-var afspil = false;
-
-
-let mySound;
-function preload(){
-    soundFormats('mp3', 'ogg');
-    mySound = loadSound('alarm.mp3');
-} 
-
-
 function setup() {
     frameRate(30);
     createCanvas(BREDDE, HOJDE);
 
 }
-
 
 function draw() {
     background(200);
@@ -60,7 +44,6 @@ function draw() {
         time = 0;
     }
 
-    
 
 
 
@@ -96,21 +79,6 @@ function draw() {
             else {
                 text("Klokken er = " + time0 + time + ":" + minutter0 + minutter + ":" + sekunder0 + decisek, 50, 175);
             }
-
-
-
-
-
-    if (tid==5){
-        afspil = true;
-    }
-    
-    if (afspil = true) {
-        mySound.setVolume(3.0);
-        mySound.play();
-        //mySound.loop();
-        afspil = false;
-    }
 
                 
 }
