@@ -35,9 +35,9 @@ var todaysClasses = {
 var returnToClock = getFirstClassStartTime(todaysClasses)
 console.log(returnToClock)
 
-console.log('Timer:' + ((returnToClock.getHours()*60)*60))
-console.log('Timer:' + (returnToClock.getMinutes()*60))
-console.log('Timer:' + returnToClock.getSeconds())
+console.log('Timer i sekunder:' + ((returnToClock.getHours()*60)*60))
+console.log('Minutter i sekunder:' + (returnToClock.getMinutes()*60))
+console.log('Sekunder:' + returnToClock.getSeconds())
 
 
 // Sammensætter en dag med random fag
