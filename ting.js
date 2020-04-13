@@ -3,7 +3,7 @@ var start = 5;
 var afspil = false;
 var lyd;
 var sluk;
-var snoozeowo;
+var snooze1;
 
 function preload(){
     lyd = loadSound('alarm.mp3');
@@ -11,15 +11,15 @@ function preload(){
 
 function setup(){
     createCanvas(200,200)
-    sluk = createButton("stop");
+    sluk = createButton("Stop");
     sluk.mousePressed(togglePlaying);
-    snoozeowo = createButton("Snoozeowo");
-    snoozeowo.mousePressed(uwu);
+    snooze1 = createButton("Snooze");
+    snooze1.mousePressed(snooze);
 }
 
-function uwu(){
+function snooze(){
     lyd.stop();
-    lyd = lyd + //VI SLUTTER HER FRA, DE SEJE ARBJEDER VIDRE HERFRA ALTSÅ JONAS OG EMIL. IKKE RASMUS OG JENNER, DOG ER JENNER OGSÅ LIDT SEJ, BARE EN SMULE.
+    start = tid + 300; 
 }
 
 function togglePlaying(){
@@ -27,11 +27,6 @@ function togglePlaying(){
 }
 
 function draw(){
-/*
-if (tid>=start){
-    afspil = true;
-    return afspil;
-}*/
 
 if (tid>=start) {
     lyd.setVolume(0.1);
