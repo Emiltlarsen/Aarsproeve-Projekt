@@ -1,16 +1,27 @@
 var BREDDE = 600;
 var HOJDE = 400;
 
+
 var time = 7;
 var minutter = 15;
 var sekunder = 0;
 var sekunder_alt; 
 
-
 var time0 = 0;
 var minutter0 = 0;
 var sekunder0 = 0;
 
+
+var start = 1;
+var afspil = false;
+var lyd;
+var sluk;
+var snooze1;
+
+
+function preload(){
+    lyd = loadSound('alarm.mp3');
+} 
 
 
 var todaysClasses = {
@@ -73,7 +84,21 @@ function getFirstClassStartTime(classes) {
 function setup() {
     frameRate(30);
     createCanvas(BREDDE, HOJDE);
+    sluk = createButton("Stop");
+    sluk.mousePressed(togglePlaying);
+    snooze1 = createButton("Snooze");
+    snooze1.mousePressed(snooze);
 }
+
+
+    function snooze(){
+        lyd.stop();
+        start = sekunder_alt + 300; 
+    }
+
+    function togglePlaying(){
+        lyd.stop();
+    }
 
 
 function draw() {
@@ -103,6 +128,12 @@ function draw() {
     }
 
 
+    if (sekunder_alt>=start) {
+        lyd.setVolume(0.1);
+        lyd.play();
+        start = start + 1000000;
+        //mySound.loop();
+    }
 
 
     //herunder ses koden vis opgave er at vise hvad klokken er i form af text. If statements bruges 
@@ -138,5 +169,5 @@ function draw() {
                 text("Klokken er = " + time0 + time + ":" + minutter0 + minutter + ":" + sekunder0 + decisek, 50, 175);
             }
 
-                
+
 }
