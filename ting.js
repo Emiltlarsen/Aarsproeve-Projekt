@@ -40,7 +40,7 @@ console.log('Timer:' + (returnToClock.getMinutes()*60))
 console.log('Timer:' + returnToClock.getSeconds())
 
 
-// Dammensætter en dag med random fag
+// Sammensætter en dag med random fag
 function getFirstClassStartTime(classes) {
     var count = Object.keys(classes).length
     var dayStarted
